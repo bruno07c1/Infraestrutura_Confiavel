@@ -1,0 +1,24 @@
+# Servidores
+
+| Servidor | IP | Serviço |
+|---|---|---|
+| SRV-DHCP | 192.168.20.10 | DHCP |
+| SRV-DNS | 192.168.20.11 | DNS |
+| SRV-NTP | 192.168.20.12 | NTP |
+| SRV-SYSLOG | 192.168.20.13 | Syslog |
+
+Todos usam máscara 255.255.255.0, gateway 192.168.20.1 e DNS 192.168.20.11.
+
+## Pool DHCP (CLIENTES)
+- Gateway: 192.168.10.1
+- DNS: 192.168.20.11
+- Início: 192.168.10.100
+- Máscara: 255.255.255.0
+- Máximo de usuários: 100
+
+## Registros DNS
+| Nome | Endereço |
+|---|---|
+| ntp.lab.local | 192.168.20.12 |
+| syslog.lab.local | 192.168.20.13 |
+| dhcp.lab.local | 192.168.20.10 |
